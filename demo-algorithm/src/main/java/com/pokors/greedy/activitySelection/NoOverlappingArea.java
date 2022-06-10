@@ -1,5 +1,8 @@
 package com.pokors.greedy.activitySelection;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * 「力扣」第 860 题：无重叠区间（中等）
  *
@@ -9,4 +12,13 @@ package com.pokors.greedy.activitySelection;
  * @since 2022/5/9 13:22
  */
 public class NoOverlappingArea {
+    static {
+        int[][] arry = new int[][] {{5, 10}, {2, 5}, {4, 7}, {3, 9}};
+        Arrays.sort(arry, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1] - o2[1];
+            }
+        });
+    }
 }
